@@ -15,7 +15,7 @@ const FooterComponent = () => {
   return (
     <footer className={noHeaderFooterUrls.includes(pathname)? classes.hide: ''}>
       <Gutter>
-        <ul className={classes.inclusions}>
+        <ul className='w-full grid grid-cols-2 lg:flex lg:flex-col'>
          {
           inclusions.map(
             (inclusion, index)=>(
