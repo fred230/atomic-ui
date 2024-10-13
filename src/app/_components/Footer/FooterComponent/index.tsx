@@ -15,11 +15,11 @@ const FooterComponent = () => {
   return (
     <footer className={noHeaderFooterUrls.includes(pathname)? classes.hide: ''}>
       <Gutter>
-        <ul className='w-full grid grid-cols-2 lg:flex lg:flex-col'>
+        <ul className='w-full grid grid-cols-2 lg:flex lg:flex-row mb-8 gap-3'>
          {
           inclusions.map(
             (inclusion, index)=>(
-              <li key={inclusion.title}>
+              <li key={inclusion.title} className='p-3'>
 
                 <Image
                 src={inclusion.icon}
@@ -32,7 +32,7 @@ const FooterComponent = () => {
                 
                 />
 
-                <h5 className={classes.title}>{inclusion.title}</h5>
+                <h5 className='p-1'>{inclusion.title}</h5>
                 <p>{inclusion.description}</p>
 
 
